@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f6f1">
+    <meta name="description" content="Freshly prepared favorites, thoughtfully delivered.">
+    <link rel="icon" href="data:,">
+    <title>Gather — Good food, gathered well</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Gather home"><span class="brand-mark">g</span> gather<span class="brand-dot">.</span></a>
+      <nav class="topnav"><a href="#menu">Our menu</a><a href="#story">Our kitchen</a></nav>
+      <button class="cart-link" id="cart-jump" aria-label="View your basket">Your bag <span id="nav-count">0</span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="story">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> GOOD FOOD, GATHERED WELL</span>
+          <h1>A little joy,<br>on your <em>table.</em></h1>
+          <p>Thoughtful ingredients, bright flavors, and the kind of meal that makes your day feel a little better.</p>
+          <a class="primary-button" href="#menu">Find your favorite <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span class="note-stars">★★★★★</span> Made with care, enjoyed anywhere</div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a fresh meal">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="plate"><div class="plate-food"><span class="food-leaf leaf-one"></span><span class="food-leaf leaf-two"></span><span class="food-leaf leaf-three"></span><span class="food-tomato tomato-one"></span><span class="food-tomato tomato-two"></span><span class="food-grain"></span><span class="food-herb"></span></div></div>
+          <div class="art-sticker sticker-top">FRESH<br>& LOCAL</div>
+          <div class="art-sticker sticker-bottom">made for<br>the good days</div>
+          <span class="sparkle sparkle-one">✳</span><span class="sparkle sparkle-two">✳</span>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading">
+          <div><span class="eyebrow">A MENU WITH GOOD INTENTIONS</span><h2>Made to make you <em>happy.</em></h2></div>
+          <span class="menu-count" id="menu-count">Our kitchen, today</span>
+        </div>
+        <div class="menu-tools">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a flavor, a feeling..." aria-label="Search menu"></label>
+          <div class="filters" id="filters" aria-label="Filter by category"></div>
+          <select id="diet-filter" aria-label="Filter by dietary preference"><option value="">All dietary needs</option><option value="vegan">Vegan</option><option value="vegetarian">Vegetarian</option><option value="gluten-free">Gluten-free</option><option value="high-protein">High protein</option></select>
+        </div>
+        <div class="menu-grid" id="menu-grid" aria-live="polite"><div class="loading">Setting the table...</div></div>
+      </section>
+
+      <section class="assistant-banner">
+        <div class="assistant-icon">✳</div>
+        <div><span class="eyebrow">NOT SURE WHAT YOU'RE CRAVING?</span><h2>Ask our little food friend.</h2><p>Tell us what sounds good, or what you're looking for.</p></div>
+        <form id="chat-form" class="chat-form"><label class="sr-only" for="chat-input">Ask the food assistant</label><input id="chat-input" maxlength="500" placeholder="Something fresh and under $15..." required><button type="submit" aria-label="Send message">↗</button></form>
+        <div id="chat-reply" class="chat-reply" aria-live="polite"></div>
+      </section>
+
+      <section class="cart-section" id="bag">
+        <div class="cart-heading"><div><span class="eyebrow">THE GOOD STUFF YOU PICKED</span><h2>Your little <em>feast.</em></h2></div><button id="clear-cart" class="text-button" type="button">Clear bag</button></div>
+        <div class="cart-content" id="cart-content"><p class="empty-cart">Your bag is taking a little break. Add something lovely from the menu.</p></div>
+        <div class="cart-total"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div>
+        <p class="cart-footnote">Taxes and delivery calculated at checkout.</p>
+      </section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="#"><span class="brand-mark">g</span> gather<span class="brand-dot">.</span></a><p>A little more joy in every bite.</p><span>© 2026 Gather Kitchen</span></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

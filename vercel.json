@@ -1,0 +1,9 @@
+{
+  "outputDirectory": "frontend",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://smart-food-delivery-api.onrender.com/api/:path*"
+    }
+  ]
+}
